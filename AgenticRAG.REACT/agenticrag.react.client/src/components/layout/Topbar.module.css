@@ -1,0 +1,108 @@
+.topbar {
+    height: 74px;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 32px;
+    border-bottom: 1px solid #edf2f7;
+}
+
+.topbarLeft {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.menuToggleBtn {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.searchWrapper {
+    display: flex;
+    align-items: center;
+    background-color: #f8fafc;
+    padding: 8px 16px;
+    border-radius: 8px;
+    width: 260px;
+    gap: 8px;
+    color: #94a3b8;
+}
+
+.searchInput {
+    border: none;
+    background: transparent;
+    outline: none;
+    width: 100%;
+}
+
+.topbarRight {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.iconBtn {
+    background: #f1f5f9;
+    border: none;
+    padding: 8px;
+    border-radius: 8px;
+    position: relative;
+    cursor: pointer;
+}
+
+.badge, .badgeDanger {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    font-size: 10px;
+    color: white;
+    padding: 2px 6px;
+    border-radius: 10px;
+}
+
+.badge {
+    background-color: #2196f3;
+}
+
+.badgeDanger {
+    background-color: #f44336;
+}
+
+.profileWidget {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #e2e8f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .menuToggleBtn {
+        display: block;
+    }
+
+    .topbar {
+        padding: 0 16px;
+    }
+
+    .searchWrapper {
+        width: 140px;
+    }
+
+    .profileMeta {
+        display: none;
+    }
+}

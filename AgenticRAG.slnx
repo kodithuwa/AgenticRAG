@@ -1,3 +1,9 @@
 <Solution>
   <Project Path="AgenticRAG.Console/AgenticRAG.Console.csproj" />
+  <Project Path="AgenticRAG.REACT/agenticrag.react.client/agenticrag.react.client.esproj">
+    <Build />
+    <Deploy />
+  </Project>
+  <Project Path="AgenticRAG.REACT/AgenticRAG.REACT.Server/AgenticRAG.REACT.Server.csproj" Id="62bbd4d7-1d66-40b9-8adc-bf024633f2a8" />
+  <Project Path="AgenticRAG.TEST/AgenticRAG.TEST/AgenticRAG.TEST.csproj" Id="8d333f19-20d1-4840-b5d7-3ab4b4d02d88" />
 </Solution>

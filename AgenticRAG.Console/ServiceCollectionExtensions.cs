@@ -27,24 +27,6 @@ public static class ServiceCollectionExtensions
 
         services.AddScoped<DatabaseInitializer>();
 
-        //    var connectionString = configuration.GetConnectionString("DefaultConnection")
-        //?? throw new InvalidOperationException("ConnectionStrings:DefaultConnection is required.");
-
-        //    // Register NpgsqlDataSource with Vector type mapping — this is what fixes
-        //    // "Writing values of 'Pgvector.Vector' is not supported" InvalidCastException
-        //    var dataSourceBuilder = new NpgsqlDataSourceBuilder(connectionString);
-        //    dataSourceBuilder.UseVector();
-        //    var dataSource = dataSourceBuilder.Build();
-
-        //    services.AddSingleton(dataSource);
-
-        //    services.AddDbContext<RagDbContext>(options =>
-        //        options.UseNpgsql(dataSource)
-        //               .EnableSensitiveDataLogging(false)
-        //               .EnableDetailedErrors(false));
-
-        //    services.AddScoped<DatabaseInitializer>();
-
         // ── Semantic Kernel ───────────────────────────────────────────────────
         var ollamaSection = configuration.GetSection("Ollama");
         var baseUrl = ollamaSection["BaseUrl"]

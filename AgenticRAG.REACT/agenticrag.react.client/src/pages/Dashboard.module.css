@@ -1,0 +1,278 @@
+.dashboardContainer {
+    display: flex;
+    width: 100vw;
+    min-height: 100vh;
+    background-color: #f8fafc;
+    font-family: 'Inter', sans-serif;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.mainContent {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    width: 100%;
+}
+
+.gridContainer {
+    padding: 24px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 24px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+/* Width Layout Grid Column Controls */
+.purpleCard, .blueCard, .tealCard {
+    grid-column: span 4;
+}
+
+.chartCard, .ordersCard {
+    grid-column: span 8;
+}
+
+.stocksCard, .customersCard {
+    grid-column: span 4;
+}
+
+.purpleCard {
+    background: linear-gradient(135deg, #7e57c2, #5e35b1);
+    color: white;
+}
+
+.blueCard {
+    background: linear-gradient(135deg, #2196f3, #1e88e5);
+    color: white;
+}
+
+.tealCard {
+    background: linear-gradient(135deg, #1de9b6, #00bfa5);
+    color: white;
+}
+
+.cardHeaderRow {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cardIconBox {
+    background: rgba(255,255,255,0.2);
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.moreBtn {
+    background: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.cardValue {
+    font-size: 28px;
+    font-weight: 700;
+    margin-top: 16px;
+}
+
+.cardLabel {
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+.cardSubtext {
+    font-size: 12px;
+    opacity: 0.7;
+    margin-top: 12px;
+}
+
+.sectionHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.viewAllLink {
+    color: #2196f3;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.dropdown {
+    padding: 6px 12px;
+    border-radius: 6px;
+    border: 1px solid #cbd5e1;
+}
+
+.tableResponsiveWrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 500px;
+}
+
+    .table th, .table td {
+        padding: 14px;
+        border-bottom: 1px solid #f1f5f9;
+        font-size: 14px;
+    }
+
+.badgeStatus {
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+.paid {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+}
+
+.chartVisualPlaceholder {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    height: 200px;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.mockBar {
+    width: 30px;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+    .mockBar::before {
+        content: '';
+        height: var(--h1);
+        background: #7e57c2;
+        border-radius: 4px 4px 0 0;
+    }
+
+    .mockBar::after {
+        content: '';
+        height: var(--h2);
+        background: #2196f3;
+    }
+
+.chartLegend {
+    display: flex;
+    gap: 16px;
+    margin-top: 16px;
+    font-size: 12px;
+}
+
+.dotPurp {
+    background: #7e57c2;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.dotBlue {
+    background: #2196f3;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.dotTeal {
+    background: #1de9b6;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.stockList, .customerList {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.stockRow, .customerRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.stockName, .customerName {
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.stockProfit {
+    color: #4caf50;
+    font-size: 12px;
+}
+
+.stockLoss {
+    color: #f44336;
+    font-size: 12px;
+}
+
+.customerInfo {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.smallAvatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #ede7f6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.progressBar {
+    width: 100px;
+    height: 6px;
+    background: #f1f5f9;
+    border-radius: 3px;
+}
+
+.progressFill {
+    height: 100%;
+    background: #7e57c2;
+    border-radius: 3px;
+}
+
+@media (max-width: 1024px) {
+    .chartCard, .ordersCard {
+        grid-column: span 12;
+    }
+
+    .stocksCard, .customersCard {
+        grid-column: span 6;
+    }
+}
+
+@media (max-width: 768px) {
+    .gridContainer {
+        padding: 16px;
+        gap: 16px;
+    }
+
+    .purpleCard, .blueCard, .tealCard, .chartCard, .ordersCard, .stocksCard, .customersCard {
+        grid-column: span 12;
+    }
+}
